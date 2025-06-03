@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Promocion Arctic Monkeys</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    
+</head>
+<body>
+
+    <header class="header">
+
+        <img src="./media/img/logo.jpg" alt="Logo de la banda" class="logo">
+        <h1>Arctic Monkeys</h1>
+        <nav class="nav">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobreLaBanda">Sobre la Banda</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#discografia">Discografía</a></li>
+                <li><a href="#video-musical">Video Musical</a></li>
+                <li><a href="#formularioContacto">Contacto</a></li>
+
+            </ul>
+
+        </nav>
+
+    </header>
+
+    <section id="inicio" class="section-inicio">
+        <h2>Bienvenidos a la página de Arctic Monkeys!</h2>
+
+    </section>
+
+
+    
+    
+    <section id="sobreLaBanda" class="section-sobreLaBanda">
+        <h2>Acerca de la banda</h2>
+        <p>Arctic Monkeys (Español: Los Monos Árticos) es una banda británica de indie rock, formada en Sheffield,
+             Reino Unido.El grupo está compuesto por el guitarrista principal y vocalista Alex Turner, 
+             el guitarrista Jamie Cook, el baterista Matt Helders y el bajista Nick O'Malley. 
+             El bajista original de la banda, Andy Nicholson, dejó el proyecto en 2006 poco después del 
+             lanzamiento del álbum debut de la banda.</p>
+        <p>Los Arctic Monkeys fueron considerados como una de las primeras bandas en hacerse conocidas al público 
+            gracias a la difusión de sus canciones por Internet, por lo cual se los catalogó como «la banda 
+            que pudo haber cambiado el mercado de la música». Esto le valió para que su primer álbum de 
+            estudio, Whatever People Say I Am, That's What I'm Not (2006), se convierta en el disco debut 
+            británico más vendido en la historia, con más de 300 mil copias vendidas en su primera semana en 
+            el mercado. Ganó el premio al Mejor Álbum Británico en los Brit Awards 2007. El segundo álbum 
+            de la banda, Favourite Worst Nightmare (2007), contó casi con el mismo éxito, ganando también el 
+            premio al Mejor Álbum Británico en los Brit Awards 2008. Sus siguientes trabajos serían Humbug (2009), 
+            un proyecto más experimental, y Suck It and See (2011).</p>
+
+    </section>
+
+
+    <section class="titulo-galeria">
+        <h2>Galería</h2>
+
+    </section>
+    
+
+    <section id="galeria" class="section-grid-container">
+    
+        
+        <img class="section-grid-container escalado3D" src="./media/img/galeria1.jpg" alt="galeria 1">
+        <img class="section-grid-container escalado3D" src="./media/img/galeria2.jpg" alt="galeria 2">
+        <img class="section-grid-container escalado3D" src="./media/img/galeria3.jpg" alt="galeria 3">
+        <img class="section-grid-container escalado3D" src="./media/img/galeria4.jpg" alt="galeria 4">
+        <img class="section-grid-container escalado3D" src="./media/img/galeria5.jpg" alt="galeria 5">
+        <img class="section-grid-container escalado3D" src="./media/img/galeria6.jpg" alt="galeria 6">
+
+    </section>
+
+    <section id="discografia" class="section-discografia">
+        <h2>Discografía: Fluorescent Adolescent</h2>
+
+        <div class="box-player" >
+            <audio class="audio-player" controls>
+                <source src="./media/audio/Fluorescent Adolescent.MP3" type="audio/mp3">
+            </audio>
+
+        </div>
+        
+
+    </section>
+
+    <section id="video-musical" class="section-conciertos">
+
+        <h2>Video musical</h2>
+
+        <div class="box-video">
+
+            <video class="video-player" controls>
+                <source src="./media/video/Arctic Monkeys video.mp4" type="video/mp4">
+            </video>
+
+        </div>
+
+        
+
+    </section>
+
+    <!-- estructura formulario -->
+    <section id="formularioContacto" class="section-formularioContacto">
+
+        <h2>Formulario de Contacto</h2>
+
+        <form>
+            <div class="form-group">
+                <label for="nombre">Nombre del Cliente</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="telefono">Número de Teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="fecha">Fecha y Hora para Booking</label>
+                    <input type="datetime-local" id="fecha" name="fecha" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="horas">Cantidad de Horas</label>
+                    <input type="number" id="horas" name="horas" min="1" max="24" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="direccion">Dirección del Lugar</label>
+                <textarea id="direccion" name="direccion" placeholder="Ingrese la dirección completa" required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Enviar</button>
+        </form>
+
+    </section>
+    
+
+    
+
+    <footer class="footer">
+
+        <p>Correo: arctic@monkeys.com</p>
+        <p>Síguenos en <a href="https://www.facebook.com/ArcticMonkeys/">Facebook</a>
+        | <a href="https://www.instagram.com/arcticmonkeys/?hl=en">Instagram</a></p>
+
+
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,158 @@
+
+
+/* resetear los estilos que vienen default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilos generales */
+body {
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #273035, #854f09);
+    color: white;
+
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #2196F3, #000);
+    justify-content: space-evenly;
+    color: white;
+}
+
+section {
+    padding: 35px;
+}
+
+
+.header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 25%;
+    border: 2px solid #ffffff;
+}
+
+/* Navegacion */
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav li {
+    margin: 75px 15px;
+}
+
+/* transicion de color en el menu */
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav a:hover {
+    
+    background-color: #854f09;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+
+.section-inicio {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+/* uso de columnas multiples para presentación del texto */
+.section-sobreLaBanda {
+    column-count: 2;
+    column-gap: 40px;
+    text-align: justify;
+}
+
+.section-sobreLaBanda h2 {
+    column-span: all; /*se usa para que el texto se extienda por todas las columnas*/
+    margin-bottom: 20px;
+}
+
+/* grid container para agregar las 6 imagenes */
+.section-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+    transition: transform 0.8s ease; 
+}
+
+/* ajuste del tamaño de cada imagen y los bordes redondos */
+.section-grid-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+/* transformacion en 3d de cada imagen */
+.escalado3D:hover {
+    transform: perspective(500px) rotateY(360deg); 
+}
+
+.section-discografia h2 {
+    padding-bottom: 30px;
+}
+
+.box-player {
+    display: flex;
+    justify-content: left;
+}
+
+/* configuracion de la sombra y bordes del audio player */
+.audio-player{
+    padding: 5px;
+    border-radius: 50px;
+    box-shadow: 0 10px 15px 15px rgba(0, 81, 255, 0.2);
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 150px;
+}
+
+.audio-player:hover {
+    box-shadow: 0 12px 20px 10px rgba(245, 244, 244, 0.3);
+}
+
+.box-video {
+    display: flex;
+    justify-content: center;
+}
+
+.video-player {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+    border: 2px double #000000;
+    
+}
+
+/* fondo gradiente al footer */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(to right, #2196F3, #000);
+    margin-top: 20px; 
+    
+}
+
+/* sombra a los links de contacto */
+footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: text-shadow 0.3s ease;
+    text-shadow: 0 5px 5px  #fbff00;
+}
+
+
+

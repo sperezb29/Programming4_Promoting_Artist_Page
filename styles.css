@@ -347,9 +347,9 @@ footer a:hover {
     }
 }
 
-/* ------------------------------------------- */
+
 /* 3. Estilos para dispositivos grandes (901px en adelante) */
-/* ------------------------------------------- */
+
 @media (min-width: 901px) {
     /* Estos son los estilos por defecto que ya tienes,
        pero los incluimos aquí para claridad y para asegurarnos

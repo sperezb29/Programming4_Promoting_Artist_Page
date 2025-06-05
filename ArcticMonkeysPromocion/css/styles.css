@@ -1,0 +1,406 @@
+/* Sergio Andres Perez Bejarano Tarea 1 */
+
+/* resetear los estilos que vienen default */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilos generales */
+body {
+    font-family: 'Rubik', sans-serif;
+    line-height: 1.6;
+    background: linear-gradient(to bottom, #273035, #854f09);
+    color: white;
+
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to right, #2196F3, #000);
+    justify-content: space-evenly;
+    color: white;
+}
+
+section {
+    padding: 35px;
+}
+
+
+.header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 25%;
+    border: 2px solid #ffffff;
+}
+
+/* Navegacion */
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav li {
+    margin: 75px 15px;
+}
+
+/* transicion de color en el menu */
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.nav a:hover {
+    
+    background-color: #854f09;
+    padding: 5px 5px;
+    border-radius: 5px;
+}
+
+.section-inicio {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+/* uso de columnas multiples para presentación del texto */
+.section-sobreLaBanda {
+    column-count: 2;
+    column-gap: 40px;
+    text-align: justify;
+}
+
+.section-sobreLaBanda h2 {
+    column-span: all; /*se usa para que el texto se extienda por todas las columnas*/
+    margin-bottom: 20px;
+}
+
+/* grid container para agregar las 6 imagenes */
+.section-grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px 300px;
+    gap: 25px;
+    max-width: 1000px;
+    margin: auto;
+    transition: transform 0.8s ease; 
+}
+
+/* ajuste del tamaño de cada imagen y los bordes redondos */
+.section-grid-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+}
+
+/* transformacion en 3d de cada imagen */
+.escalado3D:hover {
+    transform: perspective(500px) rotateY(360deg); 
+}
+
+.section-discografia h2 {
+    padding-bottom: 30px;
+}
+
+.box-player {
+    display: flex;
+    justify-content: left;
+}
+
+/* configuracion de la sombra y bordes del audio player */
+.audio-player{
+    padding: 5px;
+    border-radius: 50px;
+    box-shadow: 0 10px 15px 15px rgba(0, 81, 255, 0.2);
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 150px;
+}
+
+.audio-player:hover {
+    box-shadow: 0 12px 20px 10px rgba(245, 244, 244, 0.3);
+}
+
+.box-video {
+    display: flex;
+    justify-content: center;
+}
+
+/* configuracion de dimensiones del reproductor de video */
+.video-player {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 100%;
+    border: 2px double #000000;
+}
+
+.section-formularioContacto {
+    text-align: center;
+}
+
+.formulario-contacto {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.form-group {
+    margin-bottom: 30px;
+}
+
+/* configuracion de los labels  */
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+/* configuracion campos de entrada */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="datetime-local"],
+input[type="number"],
+
+textarea {
+    width: 30%;
+    padding: 12px;
+    border: 1px solid white;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    background-color: white;
+}
+
+/* configuracion de altura y resize del text area de la direccion */
+.textarea-direccion {
+    height: 200px;
+    resize: vertical;
+}
+
+/* configuracion boton de enviar */
+.boton-enviar {
+    display: block;
+    width: 20%;
+    margin: 10px auto;
+    padding: 15px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-enviar:hover {
+    background-color: #b30909;
+}
+
+
+/* fondo gradiente al footer */
+.footer {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(to right, #2196F3, #000);
+    margin-top: 20px; 
+    
+}
+
+/* sombra a los links de contacto */
+footer a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    transition: text-shadow 0.3s ease;
+    text-shadow: 0 5px 5px  #fbff00;
+}
+
+footer a:hover {
+    text-shadow: none;
+}
+
+
+/* Media Queries */
+
+/* media query para dispositivos muy pequeños (hasta 600px) */
+
+@media (max-width: 600px) {
+    
+    .header {
+        flex-direction: column; /* apila los elementos verticalmente */
+        justify-content: center; 
+        padding: 15px 0; 
+    }
+
+    .header img {
+        width: 80px; /* logo más pequeño */
+        height: 80px;
+        margin-bottom: 15px; 
+    }
+
+    
+    .nav ul {
+        flex-direction: column; /* apila los enlaces del menú en vertical */
+        align-items: center; 
+        padding: 0;
+    }
+
+    .nav li {
+        margin: 10px 0; 
+    }
+
+    
+    .section-inicio {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+    }
+
+  
+    .section-sobreLaBanda {
+        column-count: 1; /* muestra el texto en una sola columna */
+        column-gap: 0;
+    }
+
+    
+    .section-grid-container {
+        grid-template-columns: 1fr; /* una columna para las imágenes */
+        grid-template-rows: auto; 
+    }
+
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="datetime-local"],
+    input[type="number"],
+    textarea {
+        width: 80%; 
+    }
+
+    .boton-enviar {
+        width: 60%; 
+    }
+
+    .box-player {
+        justify-content: center; /* centra el reproductor de audio */
+    }
+
+    .box-video {
+        justify-content: center; /* centra el reproductor de video */
+    }
+
+}
+
+/* media query dispositivos medianos (entre 601px y 900px) */
+
+@media (min-width: 601px) and (max-width: 900px) {
+    
+    .header {
+        justify-content: space-around; 
+        padding: 15px 0;
+    }
+
+    .header img {
+        width: 100px; /* el logo un poco más pequeño */
+        height: 100px;
+    }
+
+    
+    .nav li {
+        margin: 50px 10px; 
+    }
+
+    
+    .section-inicio {
+        justify-content: space-around;
+        flex-wrap: wrap; /* se envuelve si no cabe */
+    }
+
+    
+    .section-sobreLaBanda {
+        column-count: 2;
+        column-gap: 30px;
+    }
+
+    
+    .section-grid-container {
+        grid-template-columns: 1fr 1fr; /* dos columnas en vez de tres */
+        grid-template-rows: auto; 
+        gap: 20px;
+        max-width: 700px; /* se reduce el ancho máximo del grid */
+    }
+
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="datetime-local"],
+    input[type="number"],
+    textarea {
+        width: 50%; 
+    }
+
+    .boton-enviar {
+        width: 30%; 
+    }
+}
+
+
+/*  media query para dispositivos grandes (901px en adelante) */
+
+@media (min-width: 901px) {
+    /* algunos estilos ya estaban para que se gestione correctamente con cambios a futuro */
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .header img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .nav ul {
+        display: flex;
+        list-style: none;
+    }
+
+    .nav li {
+        margin: 75px 15px;
+    }
+
+    .section-inicio {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .section-sobreLaBanda {
+        column-count: 2;
+        column-gap: 40px;
+    }
+
+    .section-grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 300px 300px;
+        gap: 25px;
+        max-width: 1000px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="datetime-local"],
+    input[type="number"],
+    textarea {
+        width: 30%;
+    }
+
+    .boton-enviar {
+        width: 20%;
+    }
+}
